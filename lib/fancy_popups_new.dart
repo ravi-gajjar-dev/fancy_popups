@@ -46,15 +46,6 @@ class MyFancyPopup extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              GestureDetector(
-                  onTap: (){
-                    Navigator.pop(context);
-                  },
-                  child: const Align(
-                    alignment: Alignment.centerRight,
-                    child: Icon(Icons.close,color: Colors.black45,),
-                  )
-              ),
               isSvg? SvgPicture.asset(assetIcon, height: imageWidth, width: imageHeight,package: "fancy_popups_new"):
               Image.asset(type==Type.success? "assets/images/success.png" :
               type==Type.error? "assets/images/error.png" :
